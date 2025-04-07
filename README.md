@@ -18,10 +18,10 @@ This is the backend API for **Yumcraft**, a recipe recommendation app powered by
 - ├── main.py # Flask app entry point 
 - ├── route.py # API routes and recommendation logic 
 - ├── models/ 
--     └── recipe_recommendation_model.pkl 
+-    └── recipe_recommendation_model.pkl 
 - ├── data/ 
--     └── processed/ 
--     └── recipes_processed.csv 
+-    └── processed/ 
+-    └── recipes_processed.csv 
 - ├── requirements.txt 
 - ├── .gitignore 
 - └── README.md
@@ -65,39 +65,36 @@ python main.py
 ```
 
 # ☁️ Deployment (on Render)
-- 1. Push your project to GitHub
+- Push your project to GitHub
 
-- 2. Go to render.com
+- Go to render.com
 
-- 3. Create a new Web Service
+- Create a new Web Service
 
-- 4. Choose your GitHub repo
+- Choose your GitHub repo
 
-- 5. Set:
+- Set:
 
--     Build Command: pip install -r requirements.txt
+     - Build Command: pip install -r requirements.txt
 
--     Start Command: python main.py
+     - Start Command: python main.py
 
--     Environment: Python 3.11+
+     - Environment: Python 3.11+
 
-- 6. Add PORT=5000 in environment variables (if needed)
+- Add PORT=5000 in environment variables (if needed)
 
 # 🧠 Model & Data
 - models/recipe_recommendation_model.pkl: Pickled model (vocabulary or vectorizer)
 
 - data/processed/recipes_processed.csv: Preprocessed recipe data with:
 
-- 1. Title
+   - Title
 
-- 2. Core_Ingredients
+   - Core_Ingredients
 
-- 3. Ingredient_Vector
+   - Ingredient_Vector
 
-- 4. Image Link
-
-# 🛡️ License
-## MIT License © 2025 
+   - Image Link
 
 # ❤️ Acknowledgements
 ## Thanks to all open-source contributors and dataset providers who made this project possible.
