@@ -17,11 +17,8 @@ This is the backend API for **Yumcraft**, a recipe recommendation app powered by
 - yumcraft-backend/ 
 - ├── main.py # Flask app entry point 
 - ├── route.py # API routes and recommendation logic 
-- ├── models/
-      - └── recipe_recommendation_model.pkl 
-- ├── data/ 
-      - └── processed/ 
-      - └── recipes_processed.csv 
+- ├── models/ recipe_recommendation_model.pkl 
+- ├── data/ processed/recipes_processed.csv 
 - ├── requirements.txt 
 - ├── .gitignore 
 - └── README.md
