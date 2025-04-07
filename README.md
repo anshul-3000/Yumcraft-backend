@@ -14,16 +14,17 @@ This is the backend API for **Yumcraft**, a recipe recommendation app powered by
 ---
 
 ## 📁 Project Structure
-yumcraft-backend/ 
-├── main.py # Flask app entry point 
-├── route.py # API routes and recommendation logic 
-├── models/ │ └── recipe_recommendation_model.pkl 
-├── data/ 
-    └── processed/ 
-    └── recipes_processed.csv 
-├── requirements.txt 
-├── .gitignore 
-└── README.md
+- yumcraft-backend/ 
+- ├── main.py # Flask app entry point 
+- ├── route.py # API routes and recommendation logic 
+- ├── models/ 
+-     └── recipe_recommendation_model.pkl 
+- ├── data/ 
+-     └── processed/ 
+-     └── recipes_processed.csv 
+- ├── requirements.txt 
+- ├── .gitignore 
+- └── README.md
 
 
 ---
@@ -35,3 +36,70 @@ yumcraft-backend/
 ```bash
 git clone https://github.com/your-username/Yumcraft-backend.git
 cd Yumcraft-backend
+
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python main.py
+```
+- The app will run on http://localhost:5000
+
+# 🧪 API Endpoint
+## POST /recommend
+```Request Body:
+{
+  "ingredients": ["onion", "tomato", "cheese"]
+}
+```
+```Response:
+[
+  {
+    "name": "Tomato Cheese Pasta",
+    "ingredients": "tomato, cheese, pasta",
+    "image_url": "https://example.com/image.jpg"
+  },
+  ...
+]
+```
+
+# ☁️ Deployment (on Render)
+- 1. Push your project to GitHub
+
+- 2. Go to render.com
+
+- 3. Create a new Web Service
+
+- 4. Choose your GitHub repo
+
+- 5. Set:
+
+-     Build Command: pip install -r requirements.txt
+
+-     Start Command: python main.py
+
+-     Environment: Python 3.11+
+
+- 6. Add PORT=5000 in environment variables (if needed)
+
+# 🧠 Model & Data
+- models/recipe_recommendation_model.pkl: Pickled model (vocabulary or vectorizer)
+
+- data/processed/recipes_processed.csv: Preprocessed recipe data with:
+
+- 1. Title
+
+- 2. Core_Ingredients
+
+- 3. Ingredient_Vector
+
+- 4. Image Link
+
+# 🛡️ License
+## MIT License © 2025 
+
+# ❤️ Acknowledgements
+## Thanks to all open-source contributors and dataset providers who made this project possible.
+
+--- Let me know if you'd like me to generate this into a `.md` file for direct download or create a simi
