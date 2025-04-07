@@ -9,10 +9,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 api = Blueprint('api', __name__)
 
 # Load model and data
-with open('models\\recipe_recommendation_model.pkl', 'rb') as f:
+with open('D:\\Recipe Recommendation - api-main\\models\\recipe_recommendation_model.pkl', 'rb') as f:
     vocab = pickle.load(f)
 
-df = pd.read_csv('data\\processed\\recipes_processed.csv')
+df = pd.read_csv('D:\\Recipe Recommendation - api-main\\data\\processed\\recipes_processed.csv')
 df['Ingredient_Vector'] = df['Ingredient_Vector'].apply(ast.literal_eval)
 
 # Vectorize function
