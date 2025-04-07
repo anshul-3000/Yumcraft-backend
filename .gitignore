@@ -32,9 +32,6 @@ env/
 *.sqlite3
 *.db
 
-# Model files
-*.pkl
-*.h5
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
